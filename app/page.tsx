@@ -358,8 +358,17 @@ export default function App() {
   const [appReady, setAppReady] = useState(false)
 
   useEffect(() => {
-    initializeApp()
-  }, [])
+    if (window.ethereum) {
+      window.ethereum.on("accountsChanged", async () => {
+        await checkWalletConnection()
+        if (isCorrectNetwork) fetchContractData()
+      })
+      window.ethereum.on("chainChanged", async () => {
+        await checkNetwork()
+        if (isCorrectNetwork) fetchContractData()
+      })
+    }
+  }, [isCorrectNetwork])
 
   const initializeApp = async () => {
     try {
@@ -479,6 +488,10 @@ export default function App() {
       await window.ethereum.request({ method: "eth_requestAccounts" })
       setIsWalletConnected(true)
       await checkNetwork()
+      if (isCorrectNetwork){
+        fetchContractData()
+      }
+
     } catch (error) {
       console.error("Error connecting wallet:", error)
       alert("Failed to connect wallet.")
