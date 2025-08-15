@@ -355,11 +355,23 @@ export default function App() {
   const [maxSupply, setMaxSupply] = useState(299)
   const [userHasMinted, setUserHasMinted] = useState(false)
   const [loadingContractData, setLoadingContractData] = useState(false)
+  const [appReady, setAppReady] = useState(false)
 
   useEffect(() => {
-    sdk.actions.ready()
-    checkWalletConnection()
+    initializeApp()
   }, [])
+
+  const initializeApp = async () => {
+    try {
+      await checkWalletConnection()
+      sdk.actions.ready()
+      setAppReady(true)
+    } catch (error) {
+      console.error("Error initializing app:", error)
+      sdk.actions.ready()
+      setAppReady(true)
+    }
+  }
 
   const fetchContractData = async () => {
     if (!window.ethereum || !isWalletConnected || !isCorrectNetwork) return
