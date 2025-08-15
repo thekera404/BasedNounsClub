@@ -556,13 +556,13 @@ export default function App() {
     <div className="min-h-screen bg-gradient-to-b from-[#0B0B0F] to-[#15151F] text-white flex items-center justify-center p-4">
       <div className="w-full max-w-sm bg-[#0F0F17] rounded-2xl shadow-2xl border border-[#1F1F2A] p-4">
         <div className="aspect-square rounded-xl overflow-hidden border border-[#2A2A3A] mb-4">
-          <img src="/abstract-geometric-nft.png" alt="NFT Preview" className="object-cover w-full h-full" />
+          <img src="/nft.gif" alt="NFT Preview" className="object-cover w-full h-full" />
         </div>
 
         <h2 className="text-lg font-semibold mb-3 text-center">Based Nouns Club</h2>
 
         <p className="text-gray-400 text-sm text-center mb-4 leading-relaxed">
-          Mint your exclusive NFT from the OCK collection. Each user can mint only 1 NFT. Each token is unique and
+          Mint your exclusive NFT from the Based Nouns Club collection. Each user can mint only 1 NFT. Each token is unique and
           grants you access to special community benefits and future drops.
         </p>
 
