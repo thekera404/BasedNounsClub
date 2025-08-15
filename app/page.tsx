@@ -357,6 +357,11 @@ export default function App() {
   const [loadingContractData, setLoadingContractData] = useState(false)
   const [appReady, setAppReady] = useState(false)
 
+
+  useEffect(() => {
+    initializeApp()
+  }, [])
+
   useEffect(() => {
     if (window.ethereum) {
       window.ethereum.on("accountsChanged", async () => {
@@ -372,13 +377,15 @@ export default function App() {
 
   const initializeApp = async () => {
     try {
-      await checkWalletConnection()
       sdk.actions.ready()
       setAppReady(true)
+      await checkWalletConnection()
+      await checkNetwork()
+      if (isCorrectNetwork) {
+        await fetchContractData()
+      }
     } catch (error) {
       console.error("Error initializing app:", error)
-      sdk.actions.ready()
-      setAppReady(true)
     }
   }
 
