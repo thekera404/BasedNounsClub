@@ -6,25 +6,25 @@
   },
   "miniapp": {
     "version": "1",
-    "name": "OCK NFT Mint",
-    "iconUrl": "https://your-domain.com/app-icon.png",
-    "splashImageUrl": "https://your-domain.com/splash-image.png",
+    "name": "Based Nouns Club",
+    "iconUrl": "https://based-nouns-club-va3z.vercel.app/app-icon.png",
+    "splashImageUrl": "https://based-nouns-club-va3z.vercel.app/splash-image.png",
     "splashBackgroundColor": "#0B0B0F",
-    "homeUrl": "https://your-domain.com",
-    "webhookUrl": "https://your-domain.com/api/webhook",
+    "homeUrl": "https://based-nouns-club-va3z.vercel.app/",
+    "webhookUrl": "https://based-nouns-club-va3z.vercel.app/api/webhook",
     "subtitle": "Free NFT minting on Base",
-    "description": "Mint your exclusive NFT from the OCK collection. Each token is unique and grants you access to special community benefits and future drops.",
+    "description": "Mint your exclusive NFT from the Based Nouns Club collection.",
     "screenshotUrls": [
-      "https://your-domain.com/screenshot1.png",
-      "https://your-domain.com/screenshot2.png",
-      "https://your-domain.com/screenshot3.png"
+      "https://based-nouns-club-va3z.vercel.app/screenshot1.png",
+      "https://based-nouns-club-va3z.vercel.app/screenshot2.png",
+      "https://based-nouns-club-va3z.vercel.app/screenshot3.png"
     ],
     "primaryCategory": "nft",
     "tags": ["nft", "mint", "base", "free", "collection"],
-    "heroImageUrl": "https://your-domain.com/hero-image.png",
+    "heroImageUrl": "https://based-nouns-club-va3z.vercel.app/hero-image.png",
     "tagline": "Free NFT minting on Base",
-    "ogTitle": "OCK NFT Mint - Free Minting on Base",
-    "ogDescription": "Mint your exclusive NFT from the OCK collection. Each token is unique and grants you access to special community benefits.",
-    "ogImageUrl": "https://your-domain.com/og-image.png"
+    "ogTitle": "Based Nouns Club",
+    "ogDescription": "Mint your exclusive NFT from the Based Nouns Club collection.",
+    "ogImageUrl": "https://based-nouns-club-va3z.vercel.app/og-image.png"
   }
 }
