@@ -2,7 +2,7 @@
 import { ethers } from "ethers"
 
 // Replace these with your actual contract details
-export const NFT_CONTRACT_ADDRESS = "0x1234567890123456789012345678901234567890"
+export const NFT_CONTRACT_ADDRESS = "0xf10c1C1290018e328B1Cb8745F4eE800a6fF2DC5"
 
 export const NFT_CONTRACT_ABI = [
   // Standard ERC721 functions
