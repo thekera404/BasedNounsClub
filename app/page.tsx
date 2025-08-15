@@ -546,7 +546,7 @@ export default function App() {
           <img src="/abstract-geometric-nft.png" alt="NFT Preview" className="object-cover w-full h-full" />
         </div>
 
-        <h2 className="text-lg font-semibold mb-3 text-center">OCK Mint Component</h2>
+        <h2 className="text-lg font-semibold mb-3 text-center">Based Nouns Club</h2>
 
         <p className="text-gray-400 text-sm text-center mb-4 leading-relaxed">
           Mint your exclusive NFT from the OCK collection. Each user can mint only 1 NFT. Each token is unique and
