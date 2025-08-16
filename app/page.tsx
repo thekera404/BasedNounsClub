@@ -55,7 +55,13 @@ export default function App() {
     } catch (error) {
       console.error("Error initializing app:", error)
     } finally {
-      await sdk.actions.ready() // ✅ always called
+      try {
+        console.log("Calling sdk.actions.ready()...")
+        await sdk.actions.ready()
+        console.log("✅ sdk.actions.ready() finished")
+      } catch (err) {
+        console.warn("sdk.actions.ready() failed:", err)
+      }
       setAppReady(true)
     }
   }
