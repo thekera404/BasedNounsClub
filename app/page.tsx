@@ -22,6 +22,19 @@ export default function App() {
   const [appReady, setAppReady] = useState(false)
 
   useEffect(() => {
+    const initMiniApp = async () => {
+      try {
+        console.log("Calling sdk.actions.ready() early...")
+        await sdk.actions.ready()
+        console.log("✅ sdk.actions.ready() finished")
+      } catch (err) {
+        console.warn("sdk.actions.ready() failed (probably not in Warpcast):", err)
+      }
+    }
+    initMiniApp()
+  }, [])
+
+  useEffect(() => {
     initializeApp()
   }, [])
 
@@ -48,20 +61,17 @@ export default function App() {
     }
   }, [isCorrectNetwork])
 
+
   const initializeApp = async () => {
     try {
       await checkWalletConnection()
       await checkNetwork()
+      if (isCorrectNetwork) {
+        await fetchContractData()
+      }
     } catch (error) {
       console.error("Error initializing app:", error)
     } finally {
-      try {
-        console.log("Calling sdk.actions.ready()...")
-        await sdk.actions.ready()
-        console.log("✅ sdk.actions.ready() finished")
-      } catch (err) {
-        console.warn("sdk.actions.ready() failed:", err)
-      }
       setAppReady(true)
     }
   }
